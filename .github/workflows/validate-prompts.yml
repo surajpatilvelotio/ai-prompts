@@ -65,7 +65,7 @@ jobs:
           fi
           
           # Check for code block in prompt section
-          if ! grep -q -A1 "^## Prompt" "$file" | grep -q "^\`\`\`"; then
+          if ! sed -n '/^## Prompt/,/^##/p' "$file" | grep -q '^\`\`\`'; then
             echo "::error file=$file::Prompt section should contain a code block"
             exit 1
           fi

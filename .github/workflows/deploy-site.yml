@@ -8,6 +8,10 @@ on:
       - 'site/**'
       - '.github/workflows/deploy-site.yml'
 
+# Add permissions for GitHub Pages deployment
+permissions:
+  contents: write
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
