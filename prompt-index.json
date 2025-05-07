@@ -1,0 +1,92 @@
+[
+  {
+    "id": "readme-generator",
+    "path": "/use-cases/documentation/readme-generator.md",
+    "section": "use-cases",
+    "type": "use-case",
+    "title": "Project README Generator",
+    "description": "A prompt for generating comprehensive, well-structured README files for software projects. This prompt helps create documentation that covers all essential aspects of a project.",
+    "tags": [
+      "documentation",
+      "readme",
+      "open-source",
+      "project",
+      "markdown"
+    ],
+    "contributor": "@docs-specialist - 2023-10-20",
+    "promptText": "Create a comprehensive README.md file for my {project_type} project called \"{project_name}\". The project {project_description}.\n\nInclude the following sections:\n1. Title and Description\n2. Table of Contents\n3. Features\n4. Installation Instructions\n5. Usage Examples\n6. Configuration\n7. API Documentation (if applicable)\n8. Contributing Guidelines\n9. Testing Instructions\n10. License Information\n11. Acknowledgments\n\nTechnical context:\n- Language/Framework: {language_or_framework}\n- Dependencies: {dependencies}\n- Minimum requirements: {requirements}\n\nUse proper Markdown formatting, including:\n- Headers\n- Code blocks with appropriate syntax highlighting\n- Lists\n- Tables where appropriate\n- Links\n- Badges (build status, version, license, etc.)\n\nMake the README user-friendly, comprehensive, and professional.",
+    "fullContent": "# Project README Generator\n\n## Description\nA prompt for generating comprehensive, well-structured README files for software projects. This prompt helps create documentation that covers all essential aspects of a project.\n\n## Tags\n- documentation\n- readme\n- open-source\n- project\n- markdown\n\n## Prompt\n```\nCreate a comprehensive README.md file for my {project_type} project called \"{project_name}\". The project {project_description}.\n\nInclude the following sections:\n1. Title and Description\n2. Table of Contents\n3. Features\n4. Installation Instructions\n5. Usage Examples\n6. Configuration\n7. API Documentation (if applicable)\n8. Contributing Guidelines\n9. Testing Instructions\n10. License Information\n11. Acknowledgments\n\nTechnical context:\n- Language/Framework: {language_or_framework}\n- Dependencies: {dependencies}\n- Minimum requirements: {requirements}\n\nUse proper Markdown formatting, including:\n- Headers\n- Code blocks with appropriate syntax highlighting\n- Lists\n- Tables where appropriate\n- Links\n- Badges (build status, version, license, etc.)\n\nMake the README user-friendly, comprehensive, and professional.\n```\n\n## Example Usage\n```\nCreate a comprehensive README.md file for my Node.js API project called \"TaskFlow API\". The project is a RESTful API for task management that allows creating, reading, updating, and deleting tasks, with user authentication and task categorization.\n\nInclude the following sections:\n1. Title and Description\n2. Table of Contents\n3. Features\n4. Installation Instructions\n5. Usage Examples\n6. Configuration\n7. API Documentation (if applicable)\n8. Contributing Guidelines\n9. Testing Instructions\n10. License Information\n11. Acknowledgments\n\nTechnical context:\n- Language/Framework: Node.js, Express, MongoDB\n- Dependencies: mongoose, jsonwebtoken, bcrypt, dotenv, express-validator\n- Minimum requirements: Node.js v14+, MongoDB v4+\n\nUse proper Markdown formatting, including:\n- Headers\n- Code blocks with appropriate syntax highlighting\n- Lists\n- Tables where appropriate\n- Links\n- Badges (build status, version, license, etc.)\n\nMake the README user-friendly, comprehensive, and professional.\n```\n\n## Contributed By\n@docs-specialist - 2023-10-20\n\n## Version History\n- v1.0 (2023-10-20): Initial version "
+  },
+  {
+    "id": "data-processing",
+    "path": "/technologies/python/data-processing.md",
+    "section": "technologies",
+    "type": "template",
+    "title": "Python Data Processing Template",
+    "description": "A template for processing data using Python's pandas and numpy libraries, optimized for readability and performance.",
+    "tags": [
+      "python",
+      "pandas",
+      "numpy",
+      "data-analysis",
+      "performance"
+    ],
+    "contributor": "@python-data-expert - 2023-10-10",
+    "promptText": "I need to process a dataset with Python. Please provide a complete script template that:\n\n1. Loads data from {file_format} format\n2. Performs common data cleaning operations:\n   - Handling missing values\n   - Removing duplicates\n   - Converting data types\n   - Handling outliers\n3. Includes exploratory data analysis with:\n   - Summary statistics\n   - Basic visualizations\n4. Performs transformations on the data:\n   - Feature engineering\n   - Normalization/scaling\n5. Outputs the processed data to a clean format\n6. Follows best practices for:\n   - Code organization\n   - Documentation\n   - Performance optimization\n   - Memory efficiency\n\nSpecific details about my dataset:\n- File format: {file_format} (e.g., CSV, Excel, SQL)\n- Size: {size} (e.g., small, medium, large)\n- Main purpose: {purpose} (e.g., analysis, machine learning, reporting)\n- Key challenge: {challenge} (e.g., missing data, outliers, performance)\n\nPlease include helpful comments and explanations throughout the code.",
+    "fullContent": "# Python Data Processing Template\n\n## Description\nA template for processing data using Python's pandas and numpy libraries, optimized for readability and performance.\n\n## Tags\n- python\n- pandas\n- numpy\n- data-analysis\n- performance\n\n## Prompt\n```\nI need to process a dataset with Python. Please provide a complete script template that:\n\n1. Loads data from {file_format} format\n2. Performs common data cleaning operations:\n   - Handling missing values\n   - Removing duplicates\n   - Converting data types\n   - Handling outliers\n3. Includes exploratory data analysis with:\n   - Summary statistics\n   - Basic visualizations\n4. Performs transformations on the data:\n   - Feature engineering\n   - Normalization/scaling\n5. Outputs the processed data to a clean format\n6. Follows best practices for:\n   - Code organization\n   - Documentation\n   - Performance optimization\n   - Memory efficiency\n\nSpecific details about my dataset:\n- File format: {file_format} (e.g., CSV, Excel, SQL)\n- Size: {size} (e.g., small, medium, large)\n- Main purpose: {purpose} (e.g., analysis, machine learning, reporting)\n- Key challenge: {challenge} (e.g., missing data, outliers, performance)\n\nPlease include helpful comments and explanations throughout the code.\n```\n\n## Example Usage\n```\nI need to process a dataset with Python. Please provide a complete script template that:\n\n1. Loads data from CSV format\n2. Performs common data cleaning operations:\n   - Handling missing values\n   - Removing duplicates\n   - Converting data types\n   - Handling outliers\n3. Includes exploratory data analysis with:\n   - Summary statistics\n   - Basic visualizations\n4. Performs transformations on the data:\n   - Feature engineering\n   - Normalization/scaling\n5. Outputs the processed data to a clean format\n6. Follows best practices for:\n   - Code organization\n   - Documentation\n   - Performance optimization\n   - Memory efficiency\n\nSpecific details about my dataset:\n- File format: CSV\n- Size: Medium (around 1 million rows)\n- Main purpose: Training a machine learning model\n- Key challenge: Missing data and outliers in several columns\n\nPlease include helpful comments and explanations throughout the code.\n```\n\n## Contributed By\n@python-data-expert - 2023-10-10\n\n## Version History\n- v1.0 (2023-10-10): Initial version "
+  },
+  {
+    "id": "react-components",
+    "path": "/technologies/javascript/react-components.md",
+    "section": "technologies",
+    "type": "template",
+    "title": "React Component Generator",
+    "description": "A prompt for generating well-structured, efficient React components following modern best practices.",
+    "tags": [
+      "javascript",
+      "react",
+      "component",
+      "frontend",
+      "typescript"
+    ],
+    "contributor": "@react-developer - 2023-10-15",
+    "promptText": "Create a {component_type} React component named {component_name} that {component_purpose}.\n\nTechnical requirements:\n- Use {js_or_ts} (JavaScript/TypeScript)\n- State management: {state_management} (e.g., hooks, Redux, Context API, none)\n- Styling approach: {styling_approach} (e.g., CSS modules, styled-components, Tailwind CSS)\n- Component type: {component_type} (e.g., functional with hooks, class-based)\n- Accessibility considerations: {a11y_requirements}\n\nThe component should:\n1. Be properly typed (if using TypeScript)\n2. Include error handling where appropriate\n3. Use proper React patterns\n4. Be optimized for performance\n5. Include basic tests\n6. Include JSDoc comments\n\nAdditional context:\n{additional_context}",
+    "fullContent": "# React Component Generator\n\n## Description\nA prompt for generating well-structured, efficient React components following modern best practices.\n\n## Tags\n- javascript\n- react\n- component\n- frontend\n- typescript\n\n## Prompt\n```\nCreate a {component_type} React component named {component_name} that {component_purpose}.\n\nTechnical requirements:\n- Use {js_or_ts} (JavaScript/TypeScript)\n- State management: {state_management} (e.g., hooks, Redux, Context API, none)\n- Styling approach: {styling_approach} (e.g., CSS modules, styled-components, Tailwind CSS)\n- Component type: {component_type} (e.g., functional with hooks, class-based)\n- Accessibility considerations: {a11y_requirements}\n\nThe component should:\n1. Be properly typed (if using TypeScript)\n2. Include error handling where appropriate\n3. Use proper React patterns\n4. Be optimized for performance\n5. Include basic tests\n6. Include JSDoc comments\n\nAdditional context:\n{additional_context}\n```\n\n## Example Usage\n```\nCreate a reusable React component named DataTable that displays tabular data with sorting, filtering, and pagination capabilities.\n\nTechnical requirements:\n- Use TypeScript\n- State management: React hooks (useState, useEffect, useMemo)\n- Styling approach: Tailwind CSS\n- Component type: functional with hooks\n- Accessibility considerations: fully keyboard navigable, proper ARIA attributes, screen reader friendly\n\nThe component should:\n1. Be properly typed (if using TypeScript)\n2. Include error handling where appropriate\n3. Use proper React patterns\n4. Be optimized for performance\n5. Include basic tests\n6. Include JSDoc comments\n\nAdditional context:\nThe table should accept an array of objects as data, with configurable columns. It should support client-side sorting, filtering, and pagination by default but also have the ability to delegate these functions to a parent component for server-side operations. The component will be used across multiple projects, so it should be highly customizable.\n```\n\n## Contributed By\n@react-developer - 2023-10-15\n\n## Version History\n- v1.0 (2023-10-15): Initial version "
+  },
+  {
+    "id": "user-stories",
+    "path": "/domains/product-management/user-stories.md",
+    "section": "domains",
+    "type": "feature",
+    "title": "User Story Generator for Product Managers",
+    "description": "This prompt helps product managers create well-structured user stories that follow the standard format while ensuring they capture all necessary details for development teams.",
+    "tags": [
+      "product-management",
+      "user-stories",
+      "agile",
+      "requirements",
+      "backlog"
+    ],
+    "contributor": "@pm-expert - 2023-10-05",
+    "promptText": "As a product manager, I need help creating comprehensive user stories for the following feature/functionality: \n\n[BRIEFLY DESCRIBE THE FEATURE]\n\nPlease generate 3-5 user stories that:\n\n1. Follow the standard format: \"As a [user type], I want to [action] so that [benefit/value]\"\n2. Include acceptance criteria for each story\n3. Cover different user types/personas if applicable\n4. Identify potential edge cases or error states\n5. Suggest a relative sizing estimate (S/M/L)\n6. Include any technical considerations developers should know\n7. Suggest how this might be broken down if it's too large\n\nFor context, this feature is for a [TYPE OF APPLICATION/PRODUCT] and will primarily be used by [PRIMARY USER TYPES].",
+    "fullContent": "# User Story Generator for Product Managers\n\n## Description\nThis prompt helps product managers create well-structured user stories that follow the standard format while ensuring they capture all necessary details for development teams.\n\n## Tags\n- product-management\n- user-stories\n- agile\n- requirements\n- backlog\n\n## Prompt\n```\nAs a product manager, I need help creating comprehensive user stories for the following feature/functionality: \n\n[BRIEFLY DESCRIBE THE FEATURE]\n\nPlease generate 3-5 user stories that:\n\n1. Follow the standard format: \"As a [user type], I want to [action] so that [benefit/value]\"\n2. Include acceptance criteria for each story\n3. Cover different user types/personas if applicable\n4. Identify potential edge cases or error states\n5. Suggest a relative sizing estimate (S/M/L)\n6. Include any technical considerations developers should know\n7. Suggest how this might be broken down if it's too large\n\nFor context, this feature is for a [TYPE OF APPLICATION/PRODUCT] and will primarily be used by [PRIMARY USER TYPES].\n```\n\n## Example Usage\n\n```\nAs a product manager, I need help creating comprehensive user stories for the following feature/functionality:\n\nA dashboard that shows sales analytics with filtering capabilities.\n\nPlease generate 3-5 user stories that:\n\n1. Follow the standard format: \"As a [user type], I want to [action] so that [benefit/value]\"\n2. Include acceptance criteria for each story\n3. Cover different user types/personas if applicable\n4. Identify potential edge cases or error states\n5. Suggest a relative sizing estimate (S/M/L)\n6. Include any technical considerations developers should know\n7. Suggest how this might be broken down if it's too large\n\nFor context, this feature is for a B2B SaaS application and will primarily be used by sales managers and sales representatives.\n```\n\n## Contributed By\n@pm-expert - 2023-10-05\n\n## Version History\n- v1.0 (2023-10-05): Initial version "
+  },
+  {
+    "id": "code-review",
+    "path": "/domains/engineering/code-review.md",
+    "section": "domains",
+    "type": "feature",
+    "title": "Thorough Code Review Prompt",
+    "description": "A comprehensive prompt for AI-assisted code reviews that covers code quality, potential bugs, security issues, and performance considerations.",
+    "tags": [
+      "code-review",
+      "engineering",
+      "best-practices",
+      "security",
+      "performance"
+    ],
+    "contributor": "@developer-jane - 2023-09-25",
+    "promptText": "Please review the following code and provide a thorough analysis. Consider:\n\n1. Code quality and readability:\n   - Is the code well-structured and easy to understand?\n   - Are there any violations of coding standards or best practices?\n   - Could naming be improved for clarity?\n\n2. Potential bugs and edge cases:\n   - Are there any logical errors or bugs?\n   - Are edge cases properly handled?\n   - Is there proper error handling?\n\n3. Security considerations:\n   - Are there any security vulnerabilities?\n   - Is sensitive data properly protected?\n   - Are inputs properly validated and sanitized?\n\n4. Performance optimization:\n   - Are there any performance bottlenecks?\n   - Could any operations be optimized?\n   - Are there any memory leaks or inefficient resource usage?\n\n5. Testing:\n   - Is the code testable?\n   - Are there sufficient tests?\n   - Are there any cases not covered by tests?\n\n6. Documentation:\n   - Is the code adequately documented?\n   - Are complex algorithms or business logic explained?\n\nPlease provide specific suggestions for improvement with examples where possible.\n\nCode to review:",
+    "fullContent": "# Thorough Code Review Prompt\n\n## Description\nA comprehensive prompt for AI-assisted code reviews that covers code quality, potential bugs, security issues, and performance considerations.\n\n## Tags\n- code-review\n- engineering\n- best-practices\n- security\n- performance\n\n## Prompt\n```\nPlease review the following code and provide a thorough analysis. Consider:\n\n1. Code quality and readability:\n   - Is the code well-structured and easy to understand?\n   - Are there any violations of coding standards or best practices?\n   - Could naming be improved for clarity?\n\n2. Potential bugs and edge cases:\n   - Are there any logical errors or bugs?\n   - Are edge cases properly handled?\n   - Is there proper error handling?\n\n3. Security considerations:\n   - Are there any security vulnerabilities?\n   - Is sensitive data properly protected?\n   - Are inputs properly validated and sanitized?\n\n4. Performance optimization:\n   - Are there any performance bottlenecks?\n   - Could any operations be optimized?\n   - Are there any memory leaks or inefficient resource usage?\n\n5. Testing:\n   - Is the code testable?\n   - Are there sufficient tests?\n   - Are there any cases not covered by tests?\n\n6. Documentation:\n   - Is the code adequately documented?\n   - Are complex algorithms or business logic explained?\n\nPlease provide specific suggestions for improvement with examples where possible.\n\nCode to review:\n```\n[PASTE CODE HERE]\n```\n```\n\n## Example Usage\nWhen reviewing a pull request, copy the code from the PR and paste it into the prompt to get a comprehensive review from the AI assistant.\n\n## Contributed By\n@developer-jane - 2023-09-25\n\n## Version History\n- v1.0 (2023-09-25): Initial version "
+  }
+]

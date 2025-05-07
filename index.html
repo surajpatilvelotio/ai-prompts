@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A curated library of AI prompts for coding and development tasks">
+    <title>AI Prompts Library</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <h1>AI Prompts <span class="beta-badge">BETA</span></h1>
+            <p class="subtitle">Instructions & Rules for your AI Coding Assistants</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="search-section">
+            <div class="search-container">
+                <div class="search-bar" role="search">
+                    <i class="fas fa-search" aria-hidden="true"></i>
+                    <input type="text" id="search-input" placeholder="Search for AI prompts" aria-label="Search for prompts">
+                    <button id="search-button" aria-label="Search"><i class="fas fa-arrow-right" aria-hidden="true"></i></button>
+                </div>
+                <div class="filter-tags">
+                    <button class="filter-button" data-filter="framework">Framework</button>
+                    <button class="filter-button" data-filter="service">Service</button>
+                    <button class="filter-button" data-filter="domain">Domain</button>
+                    <button class="filter-button" data-filter="technology">Technology</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="prompts-section">
+            <div class="content-header">
+                <span id="prompt-count">Loading prompts...</span>
+                <button id="filter-button" class="filter-toggle" aria-expanded="false" aria-controls="filter-sidebar">
+                    <i class="fas fa-filter" aria-hidden="true"></i> Filter
+                </button>
+            </div>
+
+            <div class="main-content">
+                <div id="prompts-container" class="prompts-grid">
+                    <!-- Prompt cards will be inserted here dynamically -->
+                    <div class="loading">Loading prompts...</div>
+                </div>
+
+                <aside id="filter-sidebar" class="filter-sidebar">
+                    <h3>Filter</h3>
+                    <div class="filter-section">
+                        <h4>Type</h4>
+                        <div class="checkbox-group" role="group" aria-labelledby="filter-type-heading">
+                            <label>
+                                <input type="checkbox" data-filter-type="feature"> Feature
+                            </label>
+                            <label>
+                                <input type="checkbox" data-filter-type="template"> Template
+                            </label>
+                            <label>
+                                <input type="checkbox" data-filter-type="use-case"> Use Case
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="filter-section">
+                        <h4 id="filter-section-heading">Sections</h4>
+                        <div class="checkbox-group" role="group" aria-labelledby="filter-section-heading">
+                            <label>
+                                <input type="checkbox" data-filter-section="domains"> Domains
+                            </label>
+                            <label>
+                                <input type="checkbox" data-filter-section="technologies"> Technologies
+                            </label>
+                            <label>
+                                <input type="checkbox" data-filter-section="use-cases"> Use Cases
+                            </label>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </section>
+    </main>
+
+    <div id="prompt-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div class="modal-content">
+            <button class="close" aria-label="Close">&times;</button>
+            <div id="modal-content"></div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2023 AI Prompts Library</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/2.1.0/showdown.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html> 

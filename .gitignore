@@ -1,0 +1,17 @@
+# Node.js dependencies
+node_modules/
+package.json
+package-lock.json
+
+# Generated files
+assets/js/prompt-index.json
+
+# Editor-specific files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS-specific files
+.DS_Store
+Thumbs.db 
