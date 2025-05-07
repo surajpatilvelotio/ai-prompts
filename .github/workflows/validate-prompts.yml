@@ -1,0 +1,77 @@
+name: Validate Prompts
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'prompts/**/*.md'
+  pull_request:
+    branches: [ main ]
+    paths:
+      - 'prompts/**/*.md'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '16'
+    
+    - name: Install dependencies
+      run: |
+        npm install -g markdownlint-cli
+    
+    - name: Check prompt file structure
+      run: |
+        echo "Checking prompt file structure..."
+        
+        find prompts -type f -name "*.md" | while read -r file; do
+          echo "Validating $file"
+          
+          # Check for required sections
+          if ! grep -q "^# " "$file"; then
+            echo "::error file=$file::Missing title (# Title)"
+            exit 1
+          fi
+          
+          if ! grep -q "^## Description" "$file"; then
+            echo "::error file=$file::Missing Description section"
+            exit 1
+          fi
+          
+          if ! grep -q "^## Tags" "$file"; then
+            echo "::error file=$file::Missing Tags section"
+            exit 1
+          fi
+          
+          if ! grep -q "^## Prompt" "$file"; then
+            echo "::error file=$file::Missing Prompt section"
+            exit 1
+          fi
+          
+          if ! grep -q "^## Contributed By" "$file"; then
+            echo "::error file=$file::Missing Contributed By section"
+            exit 1
+          fi
+          
+          if ! grep -q "^## Version History" "$file"; then
+            echo "::error file=$file::Missing Version History section"
+            exit 1
+          fi
+          
+          # Check for code block in prompt section
+          if ! grep -q -A1 "^## Prompt" "$file" | grep -q "^\`\`\`"; then
+            echo "::error file=$file::Prompt section should contain a code block"
+            exit 1
+          fi
+          
+          echo "$file is valid."
+        done
+    
+    - name: Run markdownlint
+      run: markdownlint prompts/**/*.md 

@@ -1,0 +1,40 @@
+name: Deploy GitHub Pages
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'prompts/**/*.md'
+      - 'site/**'
+      - '.github/workflows/deploy-site.yml'
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v3
+    
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 16
+    
+    - name: Install Dependencies
+      run: |
+        cd site
+        npm init -y
+        npm install glob
+    
+    - name: Generate Prompt Index
+      run: |
+        cd site
+        node generate-index.js
+    
+    - name: Deploy to GitHub Pages
+      uses: JamesIves/github-pages-deploy-action@v4
+      with:
+        folder: site
+        branch: gh-pages
+        clean: true 
